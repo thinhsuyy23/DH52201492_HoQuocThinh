@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+    <style>
+        input:focus {
+            background-color: chartreuse;
+            font-size: 20px;
+        }
+        legend {
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Form GET</h1>
+    <form id="registerForm"action="https://tranvanhung.fitstu.net/download/front-end/test.php" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Đăng ký</legend>
+            <table border="3">
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>
+                        <input type="radio" name="gt" value="Nam">Nam
+                        <input type="radio" name="gt" value="Nữ">Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sở thích</td>
+                    <td>
+                        <input type="checkbox" name="hobbies[]" value="Game">Game
+                        <input type="checkbox" name="hobbies[]" value="Du lịch">Du lịch
+                        <input type="checkbox" name="hobbies[]" value="Đá bóng">Đá bóng
+                        <input type="checkbox" name="hobbies[]" value="Đi phượt">Đi phượt
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Avatar</td>
+                    <td><input type="file" name="avatar"></td>
+                </tr>
+                <tr>
+                    <td>Lớp</td>
+                    <td>
+                        <select name="class">
+                            <option value="TH_01">TH_01</option>
+                            <option value="TH_02">TH_02</option>
+                            <option value="TH_03">TH_03</option>
+                            <option value="TH_04">TH_04</option>
+                            <option value="TH_05">TH_05</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Thêm</td>
+                    <td><textarea name="additional"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Màu sắc</td>
+                    <td><input type="color" name="color"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Gửi">
+            <input type="reset" value="Xóa">
+        </fieldset>
+    </form>
+
+    <h1>Form POST</h1>
+    <form id="registerForm"action="https://tranvanhung.fitstu.net/download/front-end/test.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Đăng ký</legend>
+            <table border="3">
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>
+                        <input type="radio" name="gt" value="Nam">Nam
+                        <input type="radio" name="gt" value="Nữ">Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sở thích</td>
+                    <td>
+                        <input type="checkbox" name="hobbies[]" value="Game">Game
+                        <input type="checkbox" name="hobbies[]" value="Du lịch">Du lịch
+                        <input type="checkbox" name="hobbies[]" value="Đá bóng">Đá bóng
+                        <input type="checkbox" name="hobbies[]" value="Đi phượt">Đi phượt
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Avatar</td>
+                    <td><input type="file" name="avatar"></td>
+                </tr>
+                <tr>
+                    <td>Lớp</td>
+                    <td>
+                        <select name="class">
+                            <option value="TH_01">TH_01</option>
+                            <option value="TH_02">TH_02</option>
+                            <option value="TH_03">TH_03</option>
+                            <option value="TH_04">TH_04</option>
+                            <option value="TH_05">TH_05</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Thêm</td>
+                    <td><textarea name="additional"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Màu sắc</td>
+                    <td><input type="color" name="color"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Gửi">
+            <input type="reset" value="Xóa">
+        </fieldset>
+    </form>
+ <script>
+       document.getElementById("registerForm").addEventListener("submit", function(event) {
+            alert("Đăng ký thành công! Vui lòng đăng nhập.");
+            window.location.href = "login.html"; // Chuyển hướng sang trang đăng nhập
+        });
+    </script>
+
+</body>
+</html>

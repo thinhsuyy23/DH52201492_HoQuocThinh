@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+</head>
+<body>
+
+    <h2>Đăng nhập</h2>
+    <form id="loginForm" action="https://tranvanhung.fitstu.net/download/front-end/test.php" method="get">
+        <table border="3">
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" id="username" name="username" required></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+        </table>
+        <input type="submit" value="Đăng nhập">
+    </form>
+
+    <script>
+        // Lấy thông tin từ URL (nếu có)
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("username").value = urlParams.get("username") || "";
+    </script>
+</body>
+</html>
